@@ -22,6 +22,7 @@ pipeline {
                     selectedAppReleaseVersion = input message: 'User input required', ok: 'Ok',
                     parameters: [choice(name: 'APP_RELEASE_VERSION', choices: "${appReleaseVersion.keySet().join('\n')}", description: 'Select Application Release Version To Deploy')]
                     msReleaseVersion =  appReleaseVersion.get(selectedAppReleaseVersion)
+                    echo "${msReleaseVersion}"
                     echo "This will deploy :"
                     msReleaseVersion.each{k,v -> println "$k version: $v"}
                     for (def key in msReleaseVersion.keySet()) {
