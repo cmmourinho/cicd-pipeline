@@ -16,9 +16,6 @@ pipeline {
         // label "STMDEVOPSLGAD1 || STMMHAPU1 || STMMHAPU2"
         label "master"
     }
-    options {
-        ansiColor('xterm')
-    }
     stages {
         stage('Select App Release Version') {
             steps {
