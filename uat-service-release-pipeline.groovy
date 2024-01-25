@@ -26,7 +26,7 @@ pipeline {
                     msReleaseVersion.each{k,v -> println "$k version: $v"}
                     for (def key in msReleaseVersion.keySet()) {
                         echo "****** Trigger ${key} ******"
-                        build job: "${key}/${key}-deployment-pipeline", parameters: [string(name: 'APP_RELEASE_VERSION', value: "${selectedAppReleaseVersion}")]
+                        echo "${key}"
                     }
                     
                 }
