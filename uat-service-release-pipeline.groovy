@@ -1,13 +1,4 @@
 node("master") {
-    stage('Check Jenkins node') {
-        script {
-            isOnline = nodesByLabel 'STMMHAPU1 || STMMHAPU2'
-            if (isOnline.isEmpty()) {
-                echo "node offline failing job"
-                throw new Exception("STMMHAPU1 || STMMHAPU2 Offline")
-            }
-        }
-    }
         stage('Prepare Pipeline Settings') {
             script {
                 checkout scm
@@ -23,10 +14,10 @@ node("master") {
 pipeline {
     agent {
         // label "STMDEVOPSLGAD1 || STMMHAPU1 || STMMHAPU2"
-        label "STMMHAPU1 || STMMHAPU2"
+        label "master"
     }
     options {
-        ansiColor('css')
+        ansiColor('xterm')
     }
     stages {
         stage('Select App Release Version') {
