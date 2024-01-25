@@ -19,14 +19,15 @@ pipeline {
             steps {
                 script {
                     echo "****** Getting App Release Version ******"
-                    selectedAppReleaseVersion = input message: 'User input required', ok: 'Ok',
+                    // selectedAppReleaseVersion = input message: 'User input required', ok: 'Ok',
+                    selectedAppReleaseVersion = "1.0.0"
                     parameters: [choice(name: 'APP_RELEASE_VERSION', choices: "${appReleaseVersion.keySet().join('\n')}", description: 'Select Application Release Version To Deploy')]
                     msReleaseVersion =  appReleaseVersion.get(selectedAppReleaseVersion)
                     echo "${msReleaseVersion}"
                     echo "This will deploy :"
                     msReleaseVersion.each{s,r -> println "$s version: $r"}
                     for (def key in msReleaseVersion.keySet()) {
-                        echo "****** Trigger ${key} ******"
+                        echo "****** Trigger ${key} *****"
                         echo "${key}"
                     }
                     
