@@ -1,0 +1,161 @@
+settings:
+  global-settings:
+    general:
+      dockerRepositoryUrl: acrdevopsnonprd.azurecr.io
+      acrNameToLogin: acrdevopsnonprd
+      acrDevSecOps: acrdevopsnonprd
+      dockerAcrDevSecOpsRepositoryUrl: acrdevopsnonprd.azurecr.io
+      myHomeAzureSubscriptionId: b13238b6-faa0-4886-8e5c-61988d66e15f
+      devSecOpsAzureSubscriptionId: 6c9b558d-631e-482d-a463-2c2928a0f745
+      projectName: myhome
+      applicationNumber: A0548
+      configForEnvironment: uat
+      dockerTagDateFormat: "+%Y%m%d%H%M%S"
+      deployManifestGitUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/deployment-config.git
+      branchToCloneDeployManifest: dev
+      dbHost: pg-a0548-myhome-uat.postgres.database.azure.com
+      dbHostIp: 10.223.101.164
+      teamChannelNotificationUrl: https://tmbbank.webhook.office.com/webhookb2/eb679c5a-c2df-4e0c-8f18-6062da691eca@771863e0-ae69-42c9-9bb8-40e48d597651/IncomingWebhook/ddf0d38b3e144ac3875c57fb9139f2f6/bb9cbdc4-6b87-42ea-a598-d13582a2bf9e
+      azureCloudResourceGroup: Myhome-UAT
+      keyVaultURL: https://kv-a0548-myhome-uat.vault.azure.net
+    credentials:
+      acrLogin: acrlogin_nonprod
+      jenkinsBitbucketClone: jenkins_autoForBitbucket
+      aksKubeconfig: aks_dev_kubeconfig
+      sonarqubeApiKey: sonarqube_credential
+      npmConfig: npm_config
+      npmConfigFe: npm_config_fe
+      azureLogin: A0548_MYHOME_JENKINS_DEVOPS_UAT
+      dbFieldEncryptKey: db-field-encrypt-key
+    aksCluster:
+      context: aks-a0548-myhome-uat
+
+  campaign-service:
+    general:
+      serviceName: campaign-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/campaign-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_campaign_service_uat
+
+  home-service:
+    general:
+      serviceName: home-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/home-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_home_service_uat
+      dbName: homedb
+    credentials:
+      dbLogin: secret-db-home
+
+  loan-service:
+    general:
+      serviceName: loan-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/loan-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_loan_service_uat
+      dbName: loandb
+    credentials:
+      dbLogin: secret-db-loan
+
+  expense-service:
+    general:
+      serviceName: expense-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/expense-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_expense_service_uat
+      dbName: expensedb
+    credentials:
+      dbLogin: secret-db-expense
+
+  insurance-service:
+    general:
+      serviceName: insurance-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/insurance-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_insurance_service_uat
+      dbName: insurancedb
+    credentials:
+      dbLogin: secret-db-insurance
+
+  user-service:
+    general:
+      serviceName: user-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/user-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_user_service_uat
+      dbName: userdb
+    credentials:
+      dbLogin: secret-db-user
+
+  authentication-service:
+    general:
+      serviceName: authentication-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/authentication-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_authentication_service_uat
+      dbName: userdb
+    credentials:
+      dbLogin: secret-db-user
+
+  mailbox-service:
+    general:
+      serviceName: mailbox-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/mailbox-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_mailbox_service_uat
+      dbName: notificationdb
+    credentials:
+      dbLogin: secret-db-notification
+
+  resync-service:
+    general:
+      serviceName: resync-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/resync-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_resync_service_uat
+
+  private-user-service:
+    general:
+      serviceName: private-user-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/user-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_private_user_service_uat
+
+  home-ui:
+    general:
+      serviceName: home-ui
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/home-ui.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_home_ui_service_uat
+      runMode: uat
+      teamChannelNotificationUrl: https://tmbbank.webhook.office.com/webhookb2/02eb936b-9b8d-4ef5-8878-54db0fd16f3b@771863e0-ae69-42c9-9bb8-40e48d597651/IncomingWebhook/f6253433c9cc4d13ba132928e203034a/bb9cbdc4-6b87-42ea-a598-d13582a2bf9e
+
+  air-pollution-service:
+    general:
+      serviceName: air-pollution-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/air-pollution-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_air_pollution_service_uat
+
+  consent-service:
+    general:
+      serviceName: consent-service
+      gitRepositoryUrl: https://bitbucket.tmbbank.local:7990/scm/myhome/consent-service.git
+      branchToClone: release/
+      namespace:  a0548-mh-uat
+      sonarqubeProjectKey: A0548_consent_service_uat
+      dbName: consentdb
+    credentials:
+      dbLogin: secret-db-consent

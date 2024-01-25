@@ -1,0 +1,15 @@
+appVersionSettings:
+  releaseVersion:
+    "1.0.0":
+      air-pollution-service: "1.0.0-212361b7aa4"
+      authentication-service: "1.0.0-36f9584e2fa"
+      campaign-service: "1.0.0-7eed62b086f"
+      consent-service: "1.0.0-53ef7388061"
+      expense-service: "1.0.0-10586fe126c"
+      home-service: "1.0.0-588e12b0b79"
+      home-ui: "1.0.0-6c445644d21"
+      insurance-service: "1.0.0-8ad9e77c7e3"
+      loan-service: "1.0.0-4758fc89fb9"
+      mailbox-service: "1.0.0-e8334e55dcf"
+      resync-service: "1.0.0-2537bd5b21b"
+      user-service: "1.0.0-89c497bff80"
