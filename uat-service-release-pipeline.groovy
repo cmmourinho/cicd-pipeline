@@ -3,8 +3,8 @@ node("master") {
             script {
                 checkout scm
                 serviceNameConfig = sh (script: "echo ${JOB_NAME} | cut -d '/' -f 3 ",returnStdout: true).trim()
-                loadConfig = readYaml file: "./uat/pipeline-config.yaml"
-                loadVersionConfig = readYaml file: "./uat/release-config.yaml"
+                loadConfig = readYaml file: "./pipeline-config.yaml"
+                loadVersionConfig = readYaml file: "./release-config.yaml"
                 appReleaseVersion = loadVersionConfig["appVersionSettings"]["releaseVersion"] 
                 globalPiplineConfig = loadConfig["settings"]["global-settings"]
                 pipelineConfig = loadConfig["settings"]["${serviceNameConfig}"]
