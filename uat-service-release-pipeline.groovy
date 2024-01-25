@@ -1,5 +1,3 @@
-@Library("jenkins-lib")_
-
 node("master") {
     stage('Check Jenkins node') {
         script {
