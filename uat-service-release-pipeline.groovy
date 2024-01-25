@@ -24,7 +24,7 @@ pipeline {
                     msReleaseVersion =  appReleaseVersion.get(selectedAppReleaseVersion)
                     echo "${msReleaseVersion}"
                     echo "This will deploy :"
-                    msReleaseVersion.each{k,v -> println "$k version: $v"}
+                    msReleaseVersion.each{s,v -> println "$s version: $v"}
                     for (def key in msReleaseVersion.keySet()) {
                         echo "****** Trigger ${key} ******"
                         echo "${key}"
