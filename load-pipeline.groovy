@@ -21,9 +21,6 @@ pipeline {
     parameters {
        booleanParam(defaultValue: false, description: 'Disable DB Migration:', name: 'DISABLE_DB_MIGRATION')
     }
-    options {
-        ansiColor('css')
-    }
     stages {
         // stage('Git Checkout') {
         //     steps {
