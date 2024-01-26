@@ -26,7 +26,7 @@ pipeline {
                     echo "${msReleaseVersion}"
                     echo "This will deploy :"
                     def fullcommit = "${GIT_COMMIT}"
-                    def version = fullcommit.substring(0, 11)
+                    def version = fullcommit.substring(0, 10)
                     echo "${version}"
                     msReleaseVersion.each{s,r -> println "$s version: $r"}
                     for (def key in msReleaseVersion.keySet()) {
