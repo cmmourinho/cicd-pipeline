@@ -15,6 +15,9 @@ node("master") {
     }
 }
 pipeline {
+    agent {
+        label "master"
+    }
     triggers {
       GenericTrigger(causeString: "Trigger From Bitbucket", genericVariables: [[defaultValue: '', key: 'RELEASE_VERSION', regexpFilter: '', value: '$.changes[0].ref.displayId'], [defaultValue: '', key: 'userIdWhoRunPipeline', regexpFilter: '', value: '$.actor.name'] , [defaultValue: '', key: 'userWhoRunPipeline', regexpFilter: '', value: '$.actor.displayName']], regexpFilterExpression: '^develop/*', regexpFilterText: '$RELEASE_VERSION', token: "${serviceNameConfig}", tokenCredentialId: '')
     }
