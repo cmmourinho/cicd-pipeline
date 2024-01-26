@@ -25,15 +25,13 @@ pipeline {
                     msReleaseVersion =  appReleaseVersion.get(selectedAppReleaseVersion)
                     echo "${msReleaseVersion}"
                     echo "This will deploy :"
-                    def fullcommit = "${GIT_COMMIT}"
-                    def version = fullcommit.substring(0, 10)
+                    def version = env.GIT_COMMIT.substring(0, 10)
                     echo "${version}"
                     msReleaseVersion.each{s,r -> println "$s version: $r"}
                     for (def key in msReleaseVersion.keySet()) {
                         echo "****** Trigger ${key} *****"
                         echo "${key}"
                     }
-                    
                 }
             }
         }
