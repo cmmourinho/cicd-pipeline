@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git credentialsId: 'cmmourinho-github', url: 'https://github.com/cmmourinho/nodejs.git'. branch: 'main'
+                git credentialsId: 'cmmourinho-github', url: 'https://github.com/cmmourinho/nodejs.git', branch: 'main'
             }
         }
 
