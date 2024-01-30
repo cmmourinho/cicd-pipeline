@@ -15,5 +15,20 @@ pipeline {
                 echo "Hello, World"
             }
         }
+
+        stage('Example') {
+            steps {
+                script {
+                    // Get the user who triggered the pipeline using Cause$UserIdCause
+                    def userWhoRunPipeline = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause').userName
+
+                    // Get the user ID who triggered the pipeline (not always available)
+                    def userIdWhoRunPipeline = currentBuild.getBuildCauses()[0]?.userId
+
+                    echo "User who triggered the pipeline: ${userWhoRunPipeline}"
+                    echo "User ID who triggered the pipeline: ${userIdWhoRunPipeline}"
+                }
+            }
+        }
     }
 }
