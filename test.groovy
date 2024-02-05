@@ -10,6 +10,9 @@ pipeline {
   		    checkout scm
 		    loadConfig = readYaml file: "./global-config.yaml"
                     globalConfig = loadConfig["settings"]["global-settings"]
+		}
+	    }
+	}
         stage('Thailand Greeting') {
             steps {
                 script {
