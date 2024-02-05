@@ -18,7 +18,7 @@ pipeline {
                 script {
                     test.thailand()
  		    echo "my docker url is ${globalConfig.general.dockerRepositoryUrl}"
-		    echo "my acr is ${acrNameToLogin}"
+		    echo "my acr is ${globalConfig.general.acrNameToLogin}"
                 }
             }
         }
