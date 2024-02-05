@@ -7,7 +7,7 @@ pipeline {
         stage('Thailand Greeting') {
             steps {
                 script {
-                    echo.thailand()
+                    test.thailand()
                 }
             }
         }
