@@ -7,7 +7,7 @@ pipeline {
         stage('Hello World') {
             steps {
                 script {
-                    echo.helloWorld()
+                    helloWorld()
                 }
             }
         }
@@ -15,9 +15,10 @@ pipeline {
         stage('Thailand Greeting') {
             steps {
                 script {
-                    echo.thailand()
+                    thailand()
                 }
             }
         }
     }
 }
+
