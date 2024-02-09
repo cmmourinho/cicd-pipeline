@@ -6,7 +6,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'cmmourinho-github', url: 'https://github.com/cmmourinho/nodejs.git']])
+                //checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'cmmourinho-github', url: 'https://github.com/cmmourinho/nodejs.git']])
+                git branch: "main", credentialsId: "cmmourinho-github" ,url: "https://github.com/cmmourinho/nodejs.git"
+                sh "ls -la"
             }
         }
 
