@@ -1,6 +1,0 @@
-settings:
-  global-settings:
-    general:
-      dockerRepositoryUrl: dockerhub
-      acrNameToLogin: suroro
-      etehostname: ronaldo

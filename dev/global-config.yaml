@@ -1,0 +1,216 @@
+pipeline-settings:
+  general:
+    envNameDev: dev
+    envNameDev2: dev2
+    dockerRepositoryUrl: https://bitbucket.org/ttbbank
+    applicationNumber: A0402
+    projectName: F2FOnboarding
+    deploymentConfigUrl: https://bitbucket.org/ttbbank/newkyc_eob-deployment-config.git
+    versionConfigUrl: https://bitbucket.org/ttbbank/newkyc_eob-control-verison.git.git
+    nexusRepo: "10.209.50.1:5000"
+    branchToClone: develop
+    logPathOnHost: /app/logs
+    logPathOnContainer: /app/logs
+  credentials:
+    jenkinsBitbucketClone: jenkins_autoForBitbucket
+    nexusUsername: F2F
+    nexusPassword: ad123Tmb*
+  dockerSwarm:
+    webServerDevIp: "172.28.46.36"
+    webServerDevUser: appusr
+    appServerDevIp: "172.28.46.37"
+    appServerDevUser: appusr
+    webServerDev2Ip: "172.28.46.40"
+    webServerDev2User: appusr
+    appServerDev2Ip: "172.28.46.41"
+    appServerDev2User: appusr
+
+cc-activity-log-service:
+  general:
+    serviceName: cc-activity-log-service
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_cc-activity-log-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8081"
+    containerPort: "8081"
+    sast_version_id: "10148"
+
+eob-admin:
+  general:
+    serviceName: eob-admin
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_eob-admin.git
+    branchToClone: develop
+    deployNodeLabel: web
+    hostPort: "8443"
+    containerPort: "8443"
+    sast_version_id: "10149"
+
+eob-authentication-service: 
+  general:
+    serviceName: eob-authentication-service
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_eob-authentication-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8010"
+    containerPort: "8010"
+    sast_version_id: "10150"
+
+eob-common-service: 
+  general:
+    serviceName: eob-common-service
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_eob-common-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8040"
+    containerPort: "8040"
+    sast_version_id: "10151"
+    
+eob-ex-gw-service:
+  general:
+    serviceName: "eob-ex-gw-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_eob-ex-gw-service.git
+    branchToClone: develop
+    deployNodeLabel: web
+    hostPort: "443"
+    containerPort: "8443"
+    sast_version_id: "10152"
+
+eob-in-gw-service:
+  general:
+    serviceName: "eob-in-gw-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_eob-in-gw-service.git
+    branchToClone: develop
+    deployNodeLabel: web
+    hostPort: "8080"
+    containerPort: "8080"
+    sast_version_id: "10153"
+
+eob-kyc-service:
+  general:
+    serviceName: "eob-kyc-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_eob-kyc-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8020"
+    containerPort: "8020"
+    sast_version_id: "10154"
+
+eob-logs-service:
+  general:
+    serviceName: "eob-logs-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_eob-logs-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8050"
+    containerPort: "8050"
+    sast_version_id: "10155"
+
+f2f-composite-service:
+  general:
+    serviceName: "f2f-composite-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_f2f-composite-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8030"
+    containerPort: "8030"
+    sast_version_id: "10156"
+
+kyc-review-web:
+  general:
+    serviceName: "kyc-review-web"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_kyc-review-web.git
+    branchToClone: develop
+    deployNodeLabel: web
+    hostPort: "8444"
+    containerPort: "8444"
+    sast_version_id: "10157"
+
+tmb-central-service:
+  general:
+    serviceName: "tmb-central-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_tmb-central-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8060"
+    containerPort: "8060"
+    sast_version_id: "10158"
+
+tmb-central-web:
+  general:
+    serviceName: "tmb-central-web"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_tmb-central-web.git
+    branchToClone: develop
+    deployNodeLabel: web
+    hostPort: "8445"
+    containerPort: "8445"
+    sast_version_id: "10159"
+
+tmb-customers-service:
+  general:
+    serviceName: "tmb-customers-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_tmb-customers-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8082"
+    containerPort: "8082"
+    sast_version_id: "10160"
+
+tmb-products-service:
+  general:
+    serviceName: "tmb-products-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_tmb-products-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8083"
+    containerPort: "8083"
+    sast_version_id: "10161"
+
+tmb-reports-service:
+  general:
+    serviceName: "tmb-reports-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_tmb-reports-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8084"
+    containerPort: "8084"
+    sast_version_id: "10162"
+
+ttb-batch-service:
+  general:
+    serviceName: "ttb-batch-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_ttb-batch-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8087"
+    containerPort: "8087"
+    sast_version_id: "10163"
+
+ttb-consent-service:
+  general:
+    serviceName: "ttb-consent-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_ttb-consent-service.git
+    branchToClone: develop
+    deployNodeLabel: app
+    hostPort: "8085"
+    containerPort: "8085"
+    sast_version_id: "10164"
+
+ttb-credit-service:
+  general:
+    serviceName: "ttb-credit-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_ttb-credit-service.git
+    branchToClone: develop
+    hostPort: "8088"
+    containerPort: "8088"
+    deployNodeLabel: app
+    sast_version_id: "10165"
+
+ttb-prospect-service:
+  general:
+    serviceName: "ttb-prospect-service"
+    gitRepositoryUrl: https://bitbucket.org/ttbbank/newkyc_ttb-prospect-service.git
+    branchToClone: develop
+    hostPort: "8086"
+    containerPort: "8086"
+    deployNodeLabel: app
+    sast_version_id: "10166"
